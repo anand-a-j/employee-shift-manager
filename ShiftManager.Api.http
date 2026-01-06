@@ -1,0 +1,6 @@
+@ShiftManager.Api_HostAddress = http://localhost:5135
+
+GET {{ShiftManager.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
