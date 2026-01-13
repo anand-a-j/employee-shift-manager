@@ -40,24 +40,23 @@ namespace ShiftManager.Api.Middleware
         {
             context.Response.ContentType = "application/json";
 
-            var statusCode = exception switch
+            HttpStatusCode statusCode = HttpStatusCode.InternalServerError;
+            string message = "Something went wrong. Please try again later.";
+            object? errors = null;
+
+            if (exception is AppException appException)
             {
-                ArgumentException => HttpStatusCode.BadRequest,
-                UnauthorizedAccessException => HttpStatusCode.Unauthorized,
-                KeyNotFoundException => HttpStatusCode.NotFound,
-                _ => HttpStatusCode.InternalServerError
-            };
+                statusCode = appException.StatusCode;
+                message = appException.Message;
+            }
 
             context.Response.StatusCode = (int)statusCode;
 
             var response = ApiResponse<object>.Fail(
-                message: GetMessage(exception),
-                errors: new
-                {
-                    type = exception.GetType().Name,
-                    detail = exception.Message
-                }
-            );
+              message: message,
+              errors: errors
+          );
+
 
             var json = JsonSerializer.Serialize(response,
             new JsonSerializerOptions
@@ -69,15 +68,5 @@ namespace ShiftManager.Api.Middleware
             await context.Response.WriteAsync(json);
         }
 
-        private static string GetMessage(Exception exception)
-        {
-            return exception switch
-            {
-                ArgumentException => "Invalid request",
-                UnauthorizedAccessException => "Unauthorized access",
-                KeyNotFoundException => "Resource not found",
-                _ => "Something went wrong. Please try again later."
-            };
-        }
     }
 }
