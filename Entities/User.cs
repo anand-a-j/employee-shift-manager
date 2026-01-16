@@ -7,5 +7,6 @@ namespace ShiftManager.Api.Entities
         public string PasswordHash { get; set; } = null!;
         public UserRole Role { get; set; }
         public Guid BusinessId { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }

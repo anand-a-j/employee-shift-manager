@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-public class RegisterRequest
+public class RegisterDto
 {  
     [Required]
     [EmailAddress]
