@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "KeuN8NMeCyg=",
+  "dgSpecHash": "woeIRjuegeI=",
   "success": true,
   "projectFilePath": "C:\\Users\\anand\\OneDrive\\Desktop\\c#\\ShiftManager.Api\\ShiftManager.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\anand\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\anand\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\anand\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.0\\microsoft.aspnetcore.authentication.jwtbearer.9.0.0.nupkg.sha512",
     "C:\\Users\\anand\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.10\\microsoft.aspnetcore.openapi.9.0.10.nupkg.sha512",

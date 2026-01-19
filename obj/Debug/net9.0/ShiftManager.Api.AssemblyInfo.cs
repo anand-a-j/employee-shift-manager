@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShiftManager.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c57d9ac841f3d3d6f2de72cf6def209869791f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5daa985fa6b3f872185717cdbcb234f2a0b175fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShiftManager.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShiftManager.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

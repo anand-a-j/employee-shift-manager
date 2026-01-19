@@ -14,7 +14,15 @@ namespace ShiftManager.Api.Data
         {
             modelBuilder.Entity<User>().HasIndex(u => u.Email).IsUnique();
 
-            modelBuilder.Entity<Business>();
+            modelBuilder.Entity<Business>(
+                entity =>
+                {
+                    entity.Property(b => b.Id).ValueGeneratedOnAdd();
+
+                    entity.Property(b => b.CreatedAt)
+                    .HasDefaultValueSql("GETUTCDATE()");
+                }
+            ); 
 
             base.OnModelCreating(modelBuilder);
         }
